@@ -1,0 +1,38 @@
+:root {
+  /* "primary" ahora es el color frambuesa de la marca */
+  --bs-primary: #b8325a;
+  --bs-primary-rgb: 184, 50, 90;
+  --bs-link-color: #b8325a;
+  --bs-link-color-rgb: 184, 50, 90;
+  --bs-link-hover-color: #8f2145;
+  --bs-link-hover-color-rgb: 143, 33, 69;
+}
+
+.btn-primary {
+  --bs-btn-bg: #b8325a;
+  --bs-btn-border-color: #b8325a;
+  --bs-btn-hover-bg: #8f2145;
+  --bs-btn-hover-border-color: #8f2145;
+  --bs-btn-active-bg: #7a1b3b;
+  --bs-btn-active-border-color: #7a1b3b;
+  --bs-btn-disabled-bg: #b8325a;
+  --bs-btn-disabled-border-color: #b8325a;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #b8325a;
+  --bs-btn-border-color: #b8325a;
+  --bs-btn-hover-bg: #b8325a;
+  --bs-btn-hover-border-color: #b8325a;
+  --bs-btn-active-bg: #8f2145;
+  --bs-btn-active-border-color: #8f2145;
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-bg: #b8325a;
+}
+
+.card .precio {
+  font-weight: 700;
+  color: #8f2145;
+}
