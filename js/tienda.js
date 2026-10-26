@@ -12,7 +12,7 @@ $("#formPedido").addEventListener("submit", (e) => {
 });
 
 // ---------- Funciones de la semana 10 ----------
-const soles = (monto) => S/ ${monto.toFixed(2)};
+const soles = (monto) => `S/ ${monto.toFixed(2)}`;
 const sumar = (...numeros) => numeros.reduce((a, n) => a + n, 0);
 const aplicarDescuento = (total, porcentaje = 10) => total * (1 - porcentaje / 100);
 
@@ -51,7 +51,7 @@ function pintarCarrito() {
       <span>${soles(it.precio * it.cantidad)}
         <button class="btn btn-sm btn-outline-danger ms-2" data-quitar="${it.id}" aria-label="Quitar ${it.nombre}">✕</button>
       </span>
-    </li>).join("") || `<li class="list-group-item text-secondary">Aún no agregas productos.</li>;
+    </li>`).join("") || `<li class="list-group-item text-secondary">Aún no agregas productos.</li>`;
   $("#subtotal").textContent = soles(sub);
   $("#descuento").textContent = conDescuento ? "Descuento del 10 % aplicado" : "";
   $("#total").textContent = soles(total);
@@ -109,7 +109,7 @@ function pintarProductos() {
     p.nombre.toLowerCase().includes(texto.toLowerCase()));
   $("#productos").innerHTML = visibles.length
     ? visibles.map(tarjetaProducto).join("")
-    : <p class="text-secondary">No hay productos con ese filtro.</p>;
+    : `<p class="text-secondary">No hay productos con ese filtro.</p>`;
 }
 
 $("#productos").addEventListener("click", (e) => {
@@ -118,7 +118,7 @@ $("#productos").addEventListener("click", (e) => {
   const p = productos.find((x) => x.id === Number(boton.dataset.id));
   carrito.agregar(p);
   pintarCarrito();
-  avisar(${p.nombre} agregado al carrito);
+  avisar(`${p.nombre} agregado al carrito`);
 });
 $("#filtros").addEventListener("click", (e) => {
   const boton = e.target.closest("[data-cat]");
